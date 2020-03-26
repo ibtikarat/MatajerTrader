@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83090361242CBAC500224F11 /* Bahij_TheSansArabic-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8309035C242CBAC400224F11 /* Bahij_TheSansArabic-SemiBold.ttf */; };
+		83090362242CBAC500224F11 /* Bahij_TheSansArabic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8309035D242CBAC400224F11 /* Bahij_TheSansArabic-Bold.ttf */; };
+		83090363242CBAC500224F11 /* Bahij_TheSansArabic-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8309035E242CBAC400224F11 /* Bahij_TheSansArabic-Light.ttf */; };
+		83090364242CBAC500224F11 /* Bahij_TheSansArabic-Plain.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8309035F242CBAC400224F11 /* Bahij_TheSansArabic-Plain.ttf */; };
+		83090365242CBAC500224F11 /* Bahij_TheSansArabic-SemiLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83090360242CBAC400224F11 /* Bahij_TheSansArabic-SemiLight.ttf */; };
+		83090368242CC02E00224F11 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8309036A242CC02E00224F11 /* InfoPlist.strings */; };
 		838AC913242B8F2400AC3F8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838AC912242B8F2400AC3F8B /* AppDelegate.swift */; };
 		838AC915242B8F2400AC3F8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838AC914242B8F2400AC3F8B /* SceneDelegate.swift */; };
 		838AC917242B8F2400AC3F8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838AC916242B8F2400AC3F8B /* ViewController.swift */; };
@@ -14,10 +20,23 @@
 		838AC91D242B8F2400AC3F8B /* MatajerTrader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 838AC91B242B8F2400AC3F8B /* MatajerTrader.xcdatamodeld */; };
 		838AC91F242B8F2C00AC3F8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 838AC91E242B8F2C00AC3F8B /* Assets.xcassets */; };
 		838AC922242B8F2C00AC3F8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838AC920242B8F2C00AC3F8B /* LaunchScreen.storyboard */; };
+		838AC92A242B9C6D00AC3F8B /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838AC929242B9C6D00AC3F8B /* HomeVC.swift */; };
+		838AC92C242B9C7C00AC3F8B /* ProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838AC92B242B9C7C00AC3F8B /* ProductsVC.swift */; };
+		838AC92E242B9C9200AC3F8B /* OrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838AC92D242B9C9200AC3F8B /* OrdersVC.swift */; };
+		838AC930242B9CA500AC3F8B /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838AC92F242B9CA500AC3F8B /* SettingsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		838AC90F242B8F2400AC3F8B /* MatajerTrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatajerTrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8309035C242CBAC400224F11 /* Bahij_TheSansArabic-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bahij_TheSansArabic-SemiBold.ttf"; sourceTree = "<group>"; };
+		8309035D242CBAC400224F11 /* Bahij_TheSansArabic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bahij_TheSansArabic-Bold.ttf"; sourceTree = "<group>"; };
+		8309035E242CBAC400224F11 /* Bahij_TheSansArabic-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bahij_TheSansArabic-Light.ttf"; sourceTree = "<group>"; };
+		8309035F242CBAC400224F11 /* Bahij_TheSansArabic-Plain.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bahij_TheSansArabic-Plain.ttf"; sourceTree = "<group>"; };
+		83090360242CBAC400224F11 /* Bahij_TheSansArabic-SemiLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bahij_TheSansArabic-SemiLight.ttf"; sourceTree = "<group>"; };
+		83090369242CC02E00224F11 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8309036B242CC05100224F11 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		8309036C242CC05100224F11 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		8309036D242CC05100224F11 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		838AC90F242B8F2400AC3F8B /* Matajer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matajer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		838AC912242B8F2400AC3F8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		838AC914242B8F2400AC3F8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		838AC916242B8F2400AC3F8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +45,10 @@
 		838AC91E242B8F2C00AC3F8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		838AC921242B8F2C00AC3F8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		838AC923242B8F2C00AC3F8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		838AC929242B9C6D00AC3F8B /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		838AC92B242B9C7C00AC3F8B /* ProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsVC.swift; sourceTree = "<group>"; };
+		838AC92D242B9C9200AC3F8B /* OrdersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersVC.swift; sourceTree = "<group>"; };
+		838AC92F242B9CA500AC3F8B /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +62,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8309035B242CBAC400224F11 /* Bahij */ = {
+			isa = PBXGroup;
+			children = (
+				8309035C242CBAC400224F11 /* Bahij_TheSansArabic-SemiBold.ttf */,
+				8309035D242CBAC400224F11 /* Bahij_TheSansArabic-Bold.ttf */,
+				8309035E242CBAC400224F11 /* Bahij_TheSansArabic-Light.ttf */,
+				8309035F242CBAC400224F11 /* Bahij_TheSansArabic-Plain.ttf */,
+				83090360242CBAC400224F11 /* Bahij_TheSansArabic-SemiLight.ttf */,
+			);
+			path = Bahij;
+			sourceTree = "<group>";
+		};
 		838AC906242B8F2400AC3F8B = {
 			isa = PBXGroup;
 			children = (
@@ -50,7 +85,7 @@
 		838AC910242B8F2400AC3F8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				838AC90F242B8F2400AC3F8B /* MatajerTrader.app */,
+				838AC90F242B8F2400AC3F8B /* Matajer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,13 +93,19 @@
 		838AC911242B8F2400AC3F8B /* MatajerTrader */ = {
 			isa = PBXGroup;
 			children = (
+				8309035B242CBAC400224F11 /* Bahij */,
 				838AC912242B8F2400AC3F8B /* AppDelegate.swift */,
 				838AC914242B8F2400AC3F8B /* SceneDelegate.swift */,
 				838AC916242B8F2400AC3F8B /* ViewController.swift */,
 				838AC918242B8F2400AC3F8B /* Main.storyboard */,
+				838AC929242B9C6D00AC3F8B /* HomeVC.swift */,
+				838AC92B242B9C7C00AC3F8B /* ProductsVC.swift */,
+				838AC92D242B9C9200AC3F8B /* OrdersVC.swift */,
+				838AC92F242B9CA500AC3F8B /* SettingsVC.swift */,
 				838AC91E242B8F2C00AC3F8B /* Assets.xcassets */,
 				838AC920242B8F2C00AC3F8B /* LaunchScreen.storyboard */,
 				838AC923242B8F2C00AC3F8B /* Info.plist */,
+				8309036A242CC02E00224F11 /* InfoPlist.strings */,
 				838AC91B242B8F2400AC3F8B /* MatajerTrader.xcdatamodeld */,
 			);
 			path = MatajerTrader;
@@ -87,7 +128,7 @@
 			);
 			name = MatajerTrader;
 			productName = MatajerTrader;
-			productReference = 838AC90F242B8F2400AC3F8B /* MatajerTrader.app */;
+			productReference = 838AC90F242B8F2400AC3F8B /* Matajer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -112,6 +153,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 838AC906242B8F2400AC3F8B;
 			productRefGroup = 838AC910242B8F2400AC3F8B /* Products */;
@@ -129,8 +171,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				838AC922242B8F2C00AC3F8B /* LaunchScreen.storyboard in Resources */,
+				83090363242CBAC500224F11 /* Bahij_TheSansArabic-Light.ttf in Resources */,
 				838AC91F242B8F2C00AC3F8B /* Assets.xcassets in Resources */,
+				83090362242CBAC500224F11 /* Bahij_TheSansArabic-Bold.ttf in Resources */,
+				83090361242CBAC500224F11 /* Bahij_TheSansArabic-SemiBold.ttf in Resources */,
 				838AC91A242B8F2400AC3F8B /* Main.storyboard in Resources */,
+				83090364242CBAC500224F11 /* Bahij_TheSansArabic-Plain.ttf in Resources */,
+				83090368242CC02E00224F11 /* InfoPlist.strings in Resources */,
+				83090365242CBAC500224F11 /* Bahij_TheSansArabic-SemiLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +190,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				838AC91D242B8F2400AC3F8B /* MatajerTrader.xcdatamodeld in Sources */,
+				838AC92A242B9C6D00AC3F8B /* HomeVC.swift in Sources */,
+				838AC92C242B9C7C00AC3F8B /* ProductsVC.swift in Sources */,
 				838AC917242B8F2400AC3F8B /* ViewController.swift in Sources */,
+				838AC92E242B9C9200AC3F8B /* OrdersVC.swift in Sources */,
+				838AC930242B9CA500AC3F8B /* SettingsVC.swift in Sources */,
 				838AC913242B8F2400AC3F8B /* AppDelegate.swift in Sources */,
 				838AC915242B8F2400AC3F8B /* SceneDelegate.swift in Sources */,
 			);
@@ -151,10 +203,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		8309036A242CC02E00224F11 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83090369242CC02E00224F11 /* en */,
+				8309036D242CC05100224F11 /* ar */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		838AC918242B8F2400AC3F8B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				838AC919242B8F2400AC3F8B /* Base */,
+				8309036B242CC05100224F11 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -163,6 +225,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				838AC921242B8F2C00AC3F8B /* Base */,
+				8309036C242CC05100224F11 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -174,6 +237,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -220,7 +284,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -234,6 +298,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -274,7 +339,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -295,8 +360,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Ibtikarat.MatajerTrader;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.matajer.cPanel;
+				PRODUCT_NAME = Matajer;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -313,8 +378,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Ibtikarat.MatajerTrader;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.matajer.cPanel;
+				PRODUCT_NAME = Matajer;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

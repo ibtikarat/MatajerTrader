@@ -1,0 +1,12 @@
+
+/* Class = "UITabBarItem"; title = "الرئيسية"; ObjectID = "21f-Lq-R4a"; */
+"21f-Lq-R4a.title" = "الرئيسية";
+
+/* Class = "UITabBarItem"; title = "المنتجات"; ObjectID = "Cpe-73-RYf"; */
+"Cpe-73-RYf.title" = "المنتجات";
+
+/* Class = "UITabBarItem"; title = "الإعدادات"; ObjectID = "NIY-eh-CNJ"; */
+"NIY-eh-CNJ.title" = "الإعدادات";
+
+/* Class = "UITabBarItem"; title = "الطلبات"; ObjectID = "qd1-aE-59c"; */
+"qd1-aE-59c.title" = "الطلبات";

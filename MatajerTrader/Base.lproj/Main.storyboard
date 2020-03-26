@@ -1,24 +1,225 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qaV-gg-IKt">
+    <device id="ipad12_9" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--المنتجات-->
+        <scene sceneID="kbF-0W-aA7">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="ipM-k2-Vch" customClass="ProductsVC" customModule="Matajer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CTH-IT-S62">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n70-Wd-uBt">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1316"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1WT-LK-5os">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="2"/>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="trackTintColor" name="MainColor"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ztm-Aq-Ha3" firstAttribute="trailing" secondItem="1WT-LK-5os" secondAttribute="trailing" id="2RY-G5-mOa"/>
+                            <constraint firstItem="n70-Wd-uBt" firstAttribute="leading" secondItem="ztm-Aq-Ha3" secondAttribute="leading" id="QFt-MP-DVH"/>
+                            <constraint firstItem="1WT-LK-5os" firstAttribute="leading" secondItem="ztm-Aq-Ha3" secondAttribute="leading" id="StJ-1F-oH0"/>
+                            <constraint firstItem="ztm-Aq-Ha3" firstAttribute="trailing" secondItem="n70-Wd-uBt" secondAttribute="trailing" id="V4a-ar-GaE"/>
+                            <constraint firstItem="n70-Wd-uBt" firstAttribute="top" secondItem="ztm-Aq-Ha3" secondAttribute="top" id="cNe-1j-a2q"/>
+                            <constraint firstItem="1WT-LK-5os" firstAttribute="top" secondItem="ztm-Aq-Ha3" secondAttribute="top" id="wq6-yl-QMc"/>
+                            <constraint firstItem="ztm-Aq-Ha3" firstAttribute="bottom" secondItem="n70-Wd-uBt" secondAttribute="bottom" id="ytv-u5-6ve"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ztm-Aq-Ha3"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="المنتجات" image="products" selectedImage="products_selected" id="Cpe-73-RYf"/>
+                    <connections>
+                        <outlet property="progressView" destination="1WT-LK-5os" id="4gC-er-7NP"/>
+                        <outlet property="webView" destination="n70-Wd-uBt" id="dOb-R9-IH5"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hmg-CV-zA0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2400" y="483"/>
+        </scene>
+        <!--الطلبات-->
+        <scene sceneID="MUP-cW-8dt">
+            <objects>
+                <viewController id="azl-jz-MrO" customClass="OrdersVC" customModule="Matajer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uup-cy-lbp">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFp-eG-5in">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1316"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QqY-uW-adI">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="2"/>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="trackTintColor" name="MainColor"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Aqa-pI-dIg" firstAttribute="bottom" secondItem="AFp-eG-5in" secondAttribute="bottom" id="6fa-Cc-xBL"/>
+                            <constraint firstItem="Aqa-pI-dIg" firstAttribute="trailing" secondItem="AFp-eG-5in" secondAttribute="trailing" id="OZb-bh-bgP"/>
+                            <constraint firstItem="AFp-eG-5in" firstAttribute="leading" secondItem="Aqa-pI-dIg" secondAttribute="leading" id="SyK-5U-i1F"/>
+                            <constraint firstItem="QqY-uW-adI" firstAttribute="top" secondItem="Aqa-pI-dIg" secondAttribute="top" id="XD7-8T-s15"/>
+                            <constraint firstItem="QqY-uW-adI" firstAttribute="leading" secondItem="Aqa-pI-dIg" secondAttribute="leading" id="bMl-x5-MCc"/>
+                            <constraint firstItem="Aqa-pI-dIg" firstAttribute="trailing" secondItem="QqY-uW-adI" secondAttribute="trailing" id="jhm-5N-zJx"/>
+                            <constraint firstItem="AFp-eG-5in" firstAttribute="top" secondItem="Aqa-pI-dIg" secondAttribute="top" id="ykc-hs-y7K"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Aqa-pI-dIg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="الطلبات" image="orders" selectedImage="orders_selected" id="qd1-aE-59c"/>
+                    <connections>
+                        <outlet property="progressView" destination="QqY-uW-adI" id="Qru-1E-ClE"/>
+                        <outlet property="webView" destination="AFp-eG-5in" id="ZU3-hY-wGJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IyO-od-Wno" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2399" y="1177"/>
+        </scene>
+        <!--الإعدادات-->
+        <scene sceneID="xC4-x4-hTt">
+            <objects>
+                <viewController id="I49-ds-UKv" customClass="SettingsVC" customModule="Matajer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rfa-np-Qat">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hVV-xx-MJY">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1316"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="O2P-aG-Zje">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="2"/>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="trackTintColor" name="MainColor"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hVV-xx-MJY" firstAttribute="leading" secondItem="ZHt-HT-ZoS" secondAttribute="leading" id="7F0-LK-RyW"/>
+                            <constraint firstItem="O2P-aG-Zje" firstAttribute="leading" secondItem="ZHt-HT-ZoS" secondAttribute="leading" id="R0p-qC-2PH"/>
+                            <constraint firstItem="ZHt-HT-ZoS" firstAttribute="trailing" secondItem="hVV-xx-MJY" secondAttribute="trailing" id="SHo-AR-qq5"/>
+                            <constraint firstItem="ZHt-HT-ZoS" firstAttribute="bottom" secondItem="hVV-xx-MJY" secondAttribute="bottom" id="VvH-E2-drN"/>
+                            <constraint firstItem="ZHt-HT-ZoS" firstAttribute="trailing" secondItem="O2P-aG-Zje" secondAttribute="trailing" id="aVi-xQ-fNo"/>
+                            <constraint firstItem="hVV-xx-MJY" firstAttribute="top" secondItem="ZHt-HT-ZoS" secondAttribute="top" id="ag7-Ir-TFU"/>
+                            <constraint firstItem="O2P-aG-Zje" firstAttribute="top" secondItem="ZHt-HT-ZoS" secondAttribute="top" id="qYd-sE-yeT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZHt-HT-ZoS"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="الإعدادات" image="settings" selectedImage="settings_selected" id="NIY-eh-CNJ"/>
+                    <connections>
+                        <outlet property="progressView" destination="O2P-aG-Zje" id="Jpn-mg-56n"/>
+                        <outlet property="webView" destination="hVV-xx-MJY" id="gSB-1l-7fV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hDL-Rg-Dd4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2399" y="1861"/>
+        </scene>
+        <!--الرئيسية-->
+        <scene sceneID="RBP-xA-jLL">
+            <objects>
+                <viewController id="gsK-5Z-lDC" customClass="HomeVC" customModule="Matajer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6D3-hQ-OtP">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wGQ-cs-ts2">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1316"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gzE-gC-7fv">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="2"/>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="trackTintColor" name="MainColor"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gzE-gC-7fv" firstAttribute="leading" secondItem="Q2p-iP-rzA" secondAttribute="leading" id="Kec-8d-qDi"/>
+                            <constraint firstItem="Q2p-iP-rzA" firstAttribute="bottom" secondItem="wGQ-cs-ts2" secondAttribute="bottom" id="M3N-MA-rps"/>
+                            <constraint firstItem="gzE-gC-7fv" firstAttribute="top" secondItem="Q2p-iP-rzA" secondAttribute="top" id="WDL-WI-uqH"/>
+                            <constraint firstItem="wGQ-cs-ts2" firstAttribute="top" secondItem="Q2p-iP-rzA" secondAttribute="top" id="X1W-IR-jfr"/>
+                            <constraint firstItem="Q2p-iP-rzA" firstAttribute="trailing" secondItem="wGQ-cs-ts2" secondAttribute="trailing" id="hS8-8J-gcl"/>
+                            <constraint firstItem="Q2p-iP-rzA" firstAttribute="trailing" secondItem="gzE-gC-7fv" secondAttribute="trailing" id="qyT-o8-eOW"/>
+                            <constraint firstItem="wGQ-cs-ts2" firstAttribute="leading" secondItem="Q2p-iP-rzA" secondAttribute="leading" id="zs3-qU-9na"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Q2p-iP-rzA"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="الرئيسية" image="home" selectedImage="home_selected" id="21f-Lq-R4a">
+                        <color key="badgeColor" name="MainColor"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="progressView" destination="gzE-gC-7fv" id="sEo-2d-teu"/>
+                        <outlet property="webView" destination="wGQ-cs-ts2" id="R2j-hV-2Js"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eHu-zn-Dau" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2401" y="-169"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Pre-ly-O1W">
+            <objects>
+                <tabBarController id="qaV-gg-IKt" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3K1-vw-Jwb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="MainColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="gsK-5Z-lDC" kind="relationship" relationship="viewControllers" id="43s-Sy-X9T"/>
+                        <segue destination="ipM-k2-Vch" kind="relationship" relationship="viewControllers" id="0gq-vw-a0k"/>
+                        <segue destination="azl-jz-MrO" kind="relationship" relationship="viewControllers" id="auM-ve-qq7"/>
+                        <segue destination="I49-ds-UKv" kind="relationship" relationship="viewControllers" id="Mav-K8-6T3"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W7q-wF-dKz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039" y="159"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="home" width="20" height="20"/>
+        <image name="home_selected" width="20" height="20"/>
+        <image name="orders" width="22" height="25"/>
+        <image name="orders_selected" width="22" height="25"/>
+        <image name="products" width="21" height="21"/>
+        <image name="products_selected" width="21" height="21"/>
+        <image name="settings" width="20" height="20"/>
+        <image name="settings_selected" width="20" height="20"/>
+        <namedColor name="MainColor">
+            <color red="0.27500000596046448" green="0.28200000524520874" blue="0.62400001287460327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
