@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 import SVProgressHUD
 
-class OrdersVC: UIViewController {
+class OrdersVC: UIViewController , WKNavigationDelegate{
     
     @IBOutlet var progressView: UIProgressView!
     @IBOutlet var webView: WKWebView!
@@ -18,7 +18,7 @@ class OrdersVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+         webView.navigationDelegate = self
         
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshWebView(_:)), for: UIControl.Event.valueChanged)
@@ -52,6 +52,17 @@ class OrdersVC: UIViewController {
         }
     }
     
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+            if let currentURL = self.webView.url?.absoluteString{
+                          print(currentURL)
+                       if currentURL.contains("login"){
+                           self.tabBarController?.tabBar.isHidden = true
+                       }else{
+                           self.tabBarController?.tabBar.isHidden = false
+                       }
+                      }
+       
+        }
     
     
 }

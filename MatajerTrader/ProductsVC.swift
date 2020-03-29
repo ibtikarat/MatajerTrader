@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 import SVProgressHUD
 
-class ProductsVC: UIViewController {
+class ProductsVC: UIViewController, WKNavigationDelegate {
     
     @IBOutlet var webView: WKWebView!
     @IBOutlet var progressView: UIProgressView!
@@ -22,7 +22,7 @@ class ProductsVC: UIViewController {
         refreshControl.addTarget(self, action: #selector(refreshWebView(_:)), for: UIControl.Event.valueChanged)
         webView.scrollView.addSubview(refreshControl)
         webView.scrollView.bounces = true
-        
+        webView.navigationDelegate = self
         self.webView.load(NSURLRequest(url: URL(string: "https://mapp.sa/admin/product")!) as URLRequest);
         self.webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil);
         
@@ -49,6 +49,17 @@ class ProductsVC: UIViewController {
             
         }
     }
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+           if let currentURL = self.webView.url?.absoluteString{
+                         print(currentURL)
+                      if currentURL.contains("login"){
+                          self.tabBarController?.tabBar.isHidden = true
+                      }else{
+                          self.tabBarController?.tabBar.isHidden = false
+                      }
+                     }
+      
+       }
     
     
 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -73,7 +73,6 @@
 				CA0ED91A36894C9465BFBE4D /* Pods-MatajerTrader.debug.xcconfig */,
 				16935954F22ADF7993A26369 /* Pods-MatajerTrader.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -424,6 +423,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 96RSKZJP5J;
 				INFOPLIST_FILE = MatajerTrader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -443,6 +443,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 96RSKZJP5J;
 				INFOPLIST_FILE = MatajerTrader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

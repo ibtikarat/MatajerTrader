@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 import SVProgressHUD
 
-class SettingsVC: UIViewController,WKNavigationDelegate,UIWebViewDelegate  {
+class SettingsVC: UIViewController, WKNavigationDelegate {
     
     @IBOutlet var progressView: UIProgressView!
     @IBOutlet var webView: WKWebView!
@@ -19,6 +19,7 @@ class SettingsVC: UIViewController,WKNavigationDelegate,UIWebViewDelegate  {
         super.viewDidLoad()
         
         
+        webView.navigationDelegate = self
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshWebView(_:)), for: UIControl.Event.valueChanged)
         webView.scrollView.addSubview(refreshControl)
@@ -34,22 +35,32 @@ class SettingsVC: UIViewController,WKNavigationDelegate,UIWebViewDelegate  {
         sender.endRefreshing()
     }
     
-    
-    
-    
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == "estimatedProgress" {
-            self.progressView.progress = Float(self.webView.estimatedProgress);
-            if self.webView.estimatedProgress != 1 {
-                SVProgressHUD.show()
-                progressView.isHidden = false
+           if keyPath == "estimatedProgress" {
+               self.progressView.progress = Float(self.webView.estimatedProgress);
+               if self.webView.estimatedProgress != 1 {
+                   SVProgressHUD.show()
+                   progressView.isHidden = false
+               }else{
+                   SVProgressHUD.dismiss()
+                   progressView.isHidden = true
+               }
+               
+               
+           }
+       }
+    
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        if let currentURL = self.webView.url?.absoluteString{
+            print(currentURL)
+            if currentURL.contains("login"){
+                self.tabBarController?.tabBar.isHidden = true
             }else{
-                SVProgressHUD.dismiss()
-                progressView.isHidden = true
+                self.tabBarController?.tabBar.isHidden = false
             }
-            
-            
         }
+        
     }
     
 }
