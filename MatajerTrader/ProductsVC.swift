@@ -8,6 +8,8 @@
 
 import UIKit
 import WebKit
+import SVProgressHUD
+
 class ProductsVC: UIViewController {
     
     @IBOutlet var webView: WKWebView!
@@ -37,8 +39,10 @@ class ProductsVC: UIViewController {
         if keyPath == "estimatedProgress" {
             self.progressView.progress = Float(self.webView.estimatedProgress);
             if self.webView.estimatedProgress != 1 {
+                SVProgressHUD.show()
                 progressView.isHidden = false
             }else{
+                SVProgressHUD.dismiss()
                 progressView.isHidden = true
             }
             

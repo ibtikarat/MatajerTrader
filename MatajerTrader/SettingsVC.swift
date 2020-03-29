@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import SVProgressHUD
 
 class SettingsVC: UIViewController,WKNavigationDelegate,UIWebViewDelegate  {
     
@@ -40,8 +41,10 @@ class SettingsVC: UIViewController,WKNavigationDelegate,UIWebViewDelegate  {
         if keyPath == "estimatedProgress" {
             self.progressView.progress = Float(self.webView.estimatedProgress);
             if self.webView.estimatedProgress != 1 {
+                SVProgressHUD.show()
                 progressView.isHidden = false
             }else{
+                SVProgressHUD.dismiss()
                 progressView.isHidden = true
             }
             
