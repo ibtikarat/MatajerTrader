@@ -13,6 +13,7 @@
 		83090364242CBAC500224F11 /* Bahij_TheSansArabic-Plain.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8309035F242CBAC400224F11 /* Bahij_TheSansArabic-Plain.ttf */; };
 		83090365242CBAC500224F11 /* Bahij_TheSansArabic-SemiLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83090360242CBAC400224F11 /* Bahij_TheSansArabic-SemiLight.ttf */; };
 		83090368242CC02E00224F11 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8309036A242CC02E00224F11 /* InfoPlist.strings */; };
+		8387979B2434CB0A00243E17 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8387979A2434CB0A00243E17 /* GoogleService-Info.plist */; };
 		838AC913242B8F2400AC3F8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838AC912242B8F2400AC3F8B /* AppDelegate.swift */; };
 		838AC915242B8F2400AC3F8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838AC914242B8F2400AC3F8B /* SceneDelegate.swift */; };
 		838AC917242B8F2400AC3F8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838AC916242B8F2400AC3F8B /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 		8309036B242CC05100224F11 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		8309036C242CC05100224F11 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		8309036D242CC05100224F11 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8387979A2434CB0A00243E17 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		838AC90F242B8F2400AC3F8B /* Matajer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matajer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		838AC912242B8F2400AC3F8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		838AC914242B8F2400AC3F8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				838AC912242B8F2400AC3F8B /* AppDelegate.swift */,
 				838AC914242B8F2400AC3F8B /* SceneDelegate.swift */,
 				838AC916242B8F2400AC3F8B /* ViewController.swift */,
+				8387979A2434CB0A00243E17 /* GoogleService-Info.plist */,
 				838AC918242B8F2400AC3F8B /* Main.storyboard */,
 				838AC929242B9C6D00AC3F8B /* HomeVC.swift */,
 				838AC92B242B9C7C00AC3F8B /* ProductsVC.swift */,
@@ -200,6 +203,7 @@
 				83090363242CBAC500224F11 /* Bahij_TheSansArabic-Light.ttf in Resources */,
 				838AC91F242B8F2C00AC3F8B /* Assets.xcassets in Resources */,
 				83090362242CBAC500224F11 /* Bahij_TheSansArabic-Bold.ttf in Resources */,
+				8387979B2434CB0A00243E17 /* GoogleService-Info.plist in Resources */,
 				83090361242CBAC500224F11 /* Bahij_TheSansArabic-SemiBold.ttf in Resources */,
 				838AC91A242B8F2400AC3F8B /* Main.storyboard in Resources */,
 				83090364242CBAC500224F11 /* Bahij_TheSansArabic-Plain.ttf in Resources */,
@@ -423,7 +427,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 96RSKZJP5J;
 				INFOPLIST_FILE = MatajerTrader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -443,7 +447,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 96RSKZJP5J;
 				INFOPLIST_FILE = MatajerTrader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

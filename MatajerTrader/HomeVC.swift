@@ -41,10 +41,18 @@ class HomeVC: UIViewController, WKNavigationDelegate {
             if self.webView.estimatedProgress != 1 {
                 SVProgressHUD.show()
                 progressView.isHidden = false
-            }else{
+            }else {
                 SVProgressHUD.dismiss()
                 progressView.isHidden = true
+                if let currentURL = self.webView.url?.absoluteString{
+                                               print(currentURL)
+                             if currentURL.contains("storeLogin"){
+                                    self.webView.load(NSURLRequest(url: URL(string: "https://mapp.sa/login")!) as URLRequest);
+                                 
+                             }
+                         }
             }
+         
             
             
         }
@@ -54,7 +62,8 @@ class HomeVC: UIViewController, WKNavigationDelegate {
                        print(currentURL)
                     if currentURL.contains("login"){
                         self.tabBarController?.tabBar.isHidden = true
-                    }else{
+                    }else {
+                       
                         self.tabBarController?.tabBar.isHidden = false
                     }
                    }

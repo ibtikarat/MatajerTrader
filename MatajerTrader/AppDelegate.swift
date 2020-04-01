@@ -9,6 +9,9 @@
 import UIKit
 import CoreData
 import SVProgressHUD
+import Firebase
+import FirebaseMessaging
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,8 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+          Thread.sleep(forTimeInterval: 5.0)
          SVProgressHUD.setDefaultMaskType(.clear)
         initAppInterface()
+        FirebaseApp.configure()
+              registerNotification()
         return true
     }
     
@@ -39,5 +45,55 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
     }
+    func registerNotification(){
+         
+       
+         let center  = UNUserNotificationCenter.current()
+         center.delegate = self
+         center.requestAuthorization(options: [.sound, .alert, .badge]) { (granted, error) in
+             if error == nil{
+                 DispatchQueue.main.async {
+                     UIApplication.shared.registerForRemoteNotifications()
+                 }
+             }
+         }
+         Messaging.messaging().delegate = self
+         
+     }
     
 }
+
+extension AppDelegate :MessagingDelegate ,UNUserNotificationCenterDelegate{
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String)
+    {
+        InstanceID.instanceID().instanceID { (result, error) in
+            if let error = error {
+                print("Error fetching remote instance ID: \(error)")
+            } else if let result = result {
+                print("Remote instance ID token: \(result.token)")
+            }
+        }
+        print("FCM Token: \(fcmToken)")
+      
+       
+    }
+    func messaging(_ messaging: Messaging, didRefreshRegistrationToken fcmToken: String) {
+        registerNotification()
+    }
+    
+ 
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        print("will present user info\(notification.request.content.userInfo)")
+ 
+        completionHandler([.alert, .badge, .sound])
+        
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        print(" did rcv user info\(response.notification.request.content.userInfo)")
+        completionHandler()
+    }
+}
+
